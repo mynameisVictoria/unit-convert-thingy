@@ -8,20 +8,31 @@ class Convert:
 		self.fahrenheit = fahrenheit
 		self.rankine = rankine
 		
-	def kelvin_to_celsius(self, kelvin):
-		self.kelvin = kelvin
-		return self.kelvin - 273.15
-	def fahrenheit_to_celsius(self, fahrenheit):
-		self.fahrenheit = fahrenheit
+	@staticmethod	
+	def kelvin_to_celsius(kelvin):
+		return kelvin - 273.15
+		
+	@staticmethod	
+	def fahrenheit_to_celsius(fahrenheit):
 		return (fahrenheit-32)/(9/5)
-	def rankine_to_celsius(self, rankine):
-		self.rankine = rankine 
+		
+	@staticmethod	
+	def rankine_to_celsius(rankine):
 		return (rankine-491.67)*5/9
+		
 	#-------------------------------------------------------------------------------#
 	
-	def celsius_to_kelvin(self, celsius):
-		self.celsius = celsius
+	@staticmethod	
+	def celsius_to_kelvin(celsius):
 		return celsius + 273.15
+		
+	@staticmethod	
+	def celsius_to_fahrenheit(celsius):
+		return celsius*9/5+32
+		
+	@staticmethod	
+	def celsius_to_rankine(celsius):
+		return celsius*9/5 + 491.67
 	
 conversion_obj  = Convert(0,0,0,0)
 
@@ -33,17 +44,28 @@ if "K" in from_input:
 	celsius = conversion_obj.kelvin_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
-		
+	elif to_input == "F":
+	    print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
+	elif to_input == "R":
+	    print(round(conversion_obj.celsius_to_rankine(celsius)))
 
 elif "F" in from_input:
 	celsius = conversion_obj.fahrenheit_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
+	elif to_input == "F":
+	   print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
+	elif to_input == "R":
+	    print(round(conversion_obj.celsius_to_rankine(celsius)))
 
 elif "R" in from_input:
 	celsius = conversion_obj.rankine_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
+	elif to_input == "F":
+	   print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
+	elif to_input == "R":
+	    print(round(conversion_obj.celsius_to_rankine(celsius)))
 		
 		
 		
