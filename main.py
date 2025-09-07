@@ -4,7 +4,7 @@ class Convert:
 	
 	def __init__(self, celsius, kelvin, fahrenheit, rankine):
 		self.celsius = celsius 
-		self.kelvin = celsius
+		self.kelvin = kelvin
 		self.fahrenheit = fahrenheit
 		self.rankine = rankine
 		
@@ -21,13 +21,33 @@ class Convert:
 	
 	def celsius_to_kelvin(self, celsius):
 		self.celsius = celsius
-		return kelvin + 273.15
+		return celsius + 273.15
 	
 conversion_obj  = Convert(0,0,0,0)
 
-usr_inpt = float(input("what would u like to convert")
+from_input = str(input(""))
+to_input = str(input(""))
+num_input = float(input(""))
 
-if usr
+if "K" in from_input:
+	celsius = conversion_obj.kelvin_to_celsius(num_input)
+	if to_input == "K":
+		print(round(conversion_obj.celsius_to_kelvin(celsius)))
+		
+
+elif "F" in from_input:
+	celsius = conversion_obj.fahrenheit_to_celsius(num_input)
+	if to_input == "K":
+		print(round(conversion_obj.celsius_to_kelvin(celsius)))
+
+elif "R" in from_input:
+	celsius = conversion_obj.rankine_to_celsius(num_input)
+	if to_input == "K":
+		print(round(conversion_obj.celsius_to_kelvin(celsius)))
+		
+		
+		
+	
 
 
 
