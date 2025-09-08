@@ -5,25 +5,48 @@ import tkinter as tk
 root = tk.Tk()
 root.geometry("500x500")
 
-result_label = tk.Label(root, bg="black")
+obj = Convert(0,0,0,0)
+
+user_input = tk.Entry(root)
+user_input.pack()
+	
+options = [  
+	"Celsius", 
+	"Fahrenheit",
+	"Kelvin",
+	"Ronkine"
+	]
+	
+def from_show():
+	from_label.config(text=from_clicked.get())
+	celsius = obj.celsius_to_celsius(float(user_input.get()))
+	if from_clicked.get() == "Celsius":
+		if to_clicked == "Celsius":
+			print(text=obj.celsius_to_celsius(celsius))
+			
+		elif to_clicked == "Fahrenheit":
+			treturn
+
+from_clicked = tk.StringVar()
+to_clicked = tk.StringVar()
+
+
+from_label = tk.Label(root, text="hello world!")
+from_label.place(x=400, y=300)
+
+to_label = tk.Label(root, text="hello world!")
+to_label.place(x=400, y=200)
+
+result_label = tk.Label(root, text="hello world!")
 result_label.pack()
 
-input_entry = tk.Entry(root, bg="black", fg="white")
-input_entry.place(x=180, y=170)
+from_dropdown = tk.OptionMenu(root, from_clicked,  *options)
+from_dropdown.place(x=150,y=300)
 
-obj_conver = Convert(0,0,0,0)
+to_dropdown = tk.OptionMenu(root, to_clicked,  *options)
+to_dropdown.place(x=150 ,y=200)
 
-def from_kelvin():
-	kelvin = input_entry.get()
-	print(obj_conver.kelvin_to_celsius(round(float(kelvin))))
-	
+myButton = tk.Button(root, text="comfirm", command=from_show).place(x=300, y=300)
 
-	
-
-
-
-
-kelvin_btn = tk.Button(root, text="celsius", command=from_kelvin)
-kelvin_btn.place(x=200,y=200)
 
 root.mainloop()
