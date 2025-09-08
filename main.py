@@ -1,5 +1,3 @@
-
-
 class Convert:
 	
 	def __init__(self, celsius, kelvin, fahrenheit, rankine):
@@ -19,6 +17,11 @@ class Convert:
 	@staticmethod	
 	def rankine_to_celsius(rankine):
 		return (rankine-491.67)*5/9
+		
+	@staticmethod
+	def celsius_to_celsius(celsius):
+		return celsius
+	
 		
 	#-------------------------------------------------------------------------------#
 	
@@ -41,7 +44,10 @@ to_input = str(input(""))
 num_input = float(input(""))
 
 if "K" in from_input:
-	celsius = conversion_obj.kelvin_to_celsius(num_input)
+	if to_input == "C":
+		print(round(conversion_obj.kelvin_to_celsius(num_input)))
+	else:
+		celsius = conversion_obj.kelvin_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
 	elif to_input == "F":
@@ -50,7 +56,10 @@ if "K" in from_input:
 	    print(round(conversion_obj.celsius_to_rankine(celsius)))
 
 elif "F" in from_input:
-	celsius = conversion_obj.fahrenheit_to_celsius(num_input)
+	if to_input == "C":
+		print(round(conversion_obj.fahrenheit_to_celsius(num_input)))
+	else:
+		celsius = conversion_obj.fahrenheit_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
 	elif to_input == "F":
@@ -59,22 +68,26 @@ elif "F" in from_input:
 	    print(round(conversion_obj.celsius_to_rankine(celsius)))
 
 elif "R" in from_input:
-	celsius = conversion_obj.rankine_to_celsius(num_input)
+	if to_input == "C":
+		print(round(conversion_obj.rankine_to_celsius(num_input)))
+	else:
+		celsius = conversion_obj.rankine_to_celsius(num_input)
 	if to_input == "K":
 		print(round(conversion_obj.celsius_to_kelvin(celsius)))
 	elif to_input == "F":
 	   print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
 	elif to_input == "R":
 	    print(round(conversion_obj.celsius_to_rankine(celsius)))
-		
-		
-		
+
+elif "C" in from_input:
+	if to_input == "C":
+		print(num_input)
+	else:
+		celsius = conversion_obj.celsius_to_celsius(num_input)
+if to_input == "K":
+	print(round(conversion_obj.celsius_to_celsius(celsius)))
+elif to_input == "F":
+	print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
+elif to_input == "R":
+	 print(round(conversion_obj.celsius_to_rankine(celsius)))
 	
-
-
-
-		
-		
-		
-	
-		
