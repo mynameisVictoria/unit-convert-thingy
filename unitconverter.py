@@ -1,3 +1,4 @@
+
 class Convert:
 	
 	def __init__(self, celsius, kelvin, fahrenheit, rankine):
@@ -22,7 +23,6 @@ class Convert:
 	def celsius_to_celsius(celsius):
 		return celsius
 	
-		
 	#-------------------------------------------------------------------------------#
 	
 	@staticmethod	
@@ -36,8 +36,11 @@ class Convert:
 	@staticmethod	
 	def celsius_to_rankine(celsius):
 		return celsius*9/5 + 491.67
-	
-conversion_obj  = Convert(0,0,0,0)
+		
+def test():
+	print("hello world!")
+
+"""conversion_obj  = Convert(0,0,0,0)
 
 from_input = str(input(""))
 to_input = str(input(""))
@@ -89,5 +92,10 @@ if to_input == "K":
 elif to_input == "F":
 	print(round(conversion_obj.celsius_to_fahrenheit(celsius)))
 elif to_input == "R":
-	 print(round(conversion_obj.celsius_to_rankine(celsius)))
+	 print(round(conversion_obj.celsius_to_rankine(celsius)))"""
+	
+		
+
+		
+	
 	
