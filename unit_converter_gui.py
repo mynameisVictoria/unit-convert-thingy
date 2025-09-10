@@ -8,6 +8,11 @@ obj = Convert(0,0,0,0)
 
 user_input = tk.Entry(root, width=25)
 user_input.place(x=20, y=150)
+
+root.title("Unit Conversion Program")
+
+easter_egg = tk.Label(root, text="lmao")
+easter_egg.place(x=600, y=600)
 	
 options = [  
 	"Celsius", 
