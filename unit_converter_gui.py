@@ -24,20 +24,21 @@ options = [
 from_clicked = tk.StringVar()
 to_clicked = tk.StringVar()
 
-result_direction_label = tk.Label(root, text="this is the result, press return/enter")
-result_direction_label.place(x=20, y=450)
+result_direction_label = tk.Label(root, text="______________________ \n"
+								    "Press return/enter")
+result_direction_label.place(x=20, y=430)
 
 direction_label = tk.Label(root, text="Bottom to top \n so if bottom is celsius and top is fahrenheit \n it will be, celsius -> fahrenheit", fg="black")
 direction_label.place(x=10, y=80)
 
-from_label = tk.Label(root, text="hello world!")
+from_label = tk.Label(root, text="To this")
 from_label.place(x=150, y=300)
 
-to_label = tk.Label(root, text="hello world!")
+to_label = tk.Label(root, text="Converts this")
 to_label.place(x=150, y=200)
 
-result_label = tk.Label(root, text="result_label")
-result_label.place(x=20, y=430)
+result_label = tk.Label(root, text="")
+result_label.place(x=20, y=420)
 
 from_dropdown = tk.OptionMenu(root, from_clicked,  *options)
 from_dropdown.place(x=20,y=300)
