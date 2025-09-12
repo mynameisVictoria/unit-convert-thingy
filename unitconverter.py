@@ -1,6 +1,12 @@
 
 class Convert:
 	
+	def __init__(self, celsius, kelvin, fahrenheit, rankine):
+		self.celsius = celsius
+		self.kelvin = kelvin
+		self.fahrenheit = fahrenheit
+		self.rankine = rankine
+	
 	@staticmethod	
 	def kelvin_to_celsius(kelvin):
 		return kelvin - 273.15
