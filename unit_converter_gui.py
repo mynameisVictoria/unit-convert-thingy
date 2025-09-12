@@ -31,10 +31,10 @@ result_direction_label.place(x=20, y=430)
 direction_label = tk.Label(root, text="Bottom to top \n so if bottom is celsius and top is fahrenheit \n it will be, celsius -> fahrenheit", fg="black")
 direction_label.place(x=10, y=80)
 
-from_label = tk.Label(root, text="To this")
+from_label = tk.Label(root, text="Converts this")
 from_label.place(x=150, y=300)
 
-to_label = tk.Label(root, text="Converts this")
+to_label = tk.Label(root, text="To this")
 to_label.place(x=150, y=200)
 
 result_label = tk.Label(root, text="")
